@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+
+
+  <filter>
+    <filter-name>captchaLogin</filter-name>
+    <filter-class>com.github.snail.servlet.RequestDispatchFilter</filter-class>
+    <init-param>
+      <param-name>captchaStyle</param-name>
+      <param-value>embedded</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>captchaLogin</filter-name>
+    <url-pattern>/captchaLogin</url-pattern>
+  </filter-mapping>
+  
+  
+  <filter>
+    <filter-name>captchaXk</filter-name>
+    <filter-class>com.github.snail.servlet.RequestDispatchFilter</filter-class>
+    <init-param>
+      <param-name>captchaStyle</param-name>
+      <param-value>popup</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>captchaXk</filter-name>
+    <url-pattern>/captchaXk</url-pattern>
+  </filter-mapping>
+  
+  
+  <filter>
+    <filter-name>captchaXk_limiter</filter-name>
+    <filter-class>com.github.snail.servlet.RequestDispatchFilter</filter-class>
+    <init-param>
+      <param-name>captchaStyle</param-name>
+      <param-value>popup</param-value>
+    </init-param>
+    <init-param>
+      <param-name>upstreamFilterName</param-name>
+      <param-value>captchaXk</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>captchaXk_limiter</filter-name>
+    <url-pattern>/captchaXk_ajax</url-pattern>
+  </filter-mapping>
+  
+  
+  <filter>
+    <filter-name>ChangeLanguageFilter</filter-name>
+    <filter-class>com.github.snail.servlet.ChangeLanguageFilter</filter-class>
+    <init-param>
+      <param-name>changeLanguageRequestParam</param-name>
+      <param-value>language</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>ChangeLanguageFilter</filter-name>
+    <url-pattern>/changeLanguage</url-pattern>
+  </filter-mapping>
+  
+  
+  <servlet>
+    <servlet-name>ChangeLanguageDemoServlet</servlet-name>
+    <servlet-class>com.github.snail.servlet.ChangeLanguageFilter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChangeLanguageDemoServlet</servlet-name>
+    <url-pattern>/changeLanguage</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>

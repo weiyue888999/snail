@@ -1,0 +1,402 @@
+.p-0 {
+	padding: 0px;
+}
+
+
+/*登录页*/
+
+.login-page .login-form {
+	position: relative;
+	width: 400px;
+	margin: 1% auto 0 auto;
+	box-shadow: 1px 2px 3px #ddd;
+	border: 1px solid #eee;
+	padding: 20px 30px 30px 30px;
+	border-radius: 5px;
+}
+
+.login-page .login-form .logo-inner {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.login-page .login-form .logo-inner img {
+	max-width: 200px;
+}
+
+.login-page .login-form .form-group {
+	overflow: hidden;
+}
+
+.login-page .login-form .form-group:last-child {
+	margin-top: 20px;
+}
+
+.login-page .login-form .input-group-addon {
+	background-color: #fff;
+	padding: 5px 12px;
+	border: 1px solid #e4e4e4;
+	height: 40px;
+}
+
+.login-page .login-form .form-control {
+	border: 1px solid #e4e4e4;
+	box-shadow: none;
+	border-left: 0px;
+	height: 40px;
+}
+
+.login-page .login-form .input-group-addon img {
+	width: 18px;
+	height: 18px;
+}
+
+.login-page .login-form .form-control:focus {
+	box-shadow: none;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.login-page .login-form .form-group .vague {
+	vertical-align: -11px;
+	font-size: 12px;
+	color: #5d5d5e;
+	margin-left: -5px;
+}
+
+.login-page .login-form .form-group .forget-pwd {
+	float: right;
+}
+
+.login-page .login-form .form-group .forget-pwd img {
+	max-width: 15px;
+}
+
+.login-page .login-form .form-group .forget-pwd>a {
+	color: #a7afb9;
+	vertical-align: -3px;
+}
+
+.login-page .login-form .error {
+	color: #FF4242;
+}
+
+.login-page .login-form .input-group {
+	position: relative;
+}
+
+.login-page .login-form .toggleIcon {
+	position: absolute;
+	right: 4px;
+	top: 6px;
+	z-index: 9;
+}
+
+.login-page .login-form .login-btn {
+	background-color: #137FCA;
+	border: 1px solid #137FCA;
+	height: 42px;
+}
+
+.login-page .login-form .form-group .vague:hover,
+.login-page .login-form .form-group .forget-pwd>a:hover,
+.login-page .login-form .toggleIcon:hover,
+.login-page .login-form .login-btn:hover {
+	cursor: pointer;
+}
+
+.login-page .login-form .login-btn-wrap {
+	margin-top: 40px;
+}
+
+
+/*滑块*/
+
+.login-page .verBox {
+	width: 100%;
+	text-align: center;
+	opacity: 1;
+	transition: all 0.8s;
+	margin-top: -10px;
+}
+
+
+.login-page #imgVer .inner {
+	display: none;
+	position: absolute;
+	top: 58px;
+    height: 220px;
+	z-index:9;
+}
+
+.login-page .slider-btn {
+	width: 48px;
+	border-radius: 2px;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	height: 38px;
+	background-color: #fff;
+	box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+	cursor: pointer;
+	transition: background .2s linear;
+}
+
+.login-page .slider-icon {
+	position: absolute;
+	top: 50%;
+	margin-top: -6px;
+	left: 50%;
+	margin-left: -6px;
+	width: 14px;
+	height: 10px;
+	background-image: url(../img/sprite.3.2.0.png);
+	background-position: 0 -26px;
+}
+
+.login-page .slider-btn:hover .slider-icon {
+	background-position: 0 0;
+}
+
+.login-page .slider-btn:hover {
+	background-color: #1991fa;
+}
+
+.login-page .slider-btn:hover {
+	cursor: pointer;
+}
+
+.login-page .ver-tips {
+	position: absolute;
+	left: 0;
+	bottom: -22px;
+	background: rgba(255, 255, 255, 0.9);
+	height: 22px;
+	line-height: 22px;
+	font-size: 12px;
+	width: 100%;
+	margin: 0;
+	text-align: left;
+	padding: 0 8px;
+	transition: all 0.4s;
+}
+
+.login-page .slider-tips {
+	bottom: 0;
+}
+
+.login-page .ver-tips i {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	vertical-align: top;
+	background-image: url(../img/sprite.3.2.0.png);
+	background-position: -4px -1229px;
+}
+
+.login-page .ver-tips span {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 22px;
+	color: #455;
+}
+
+.login-page .active-tips {
+	display: block;
+}
+
+.login-page .re-btn {
+	position: relative;
+	top: -194px;
+	right: 5px;
+	z-index:99;
+}
+
+.login-page .re-btn a {
+	display: inline-block;
+	background-image: url(../img/sprite.3.2.0.png);
+	background-position: 0 -299px;
+	float: right;
+	width: 30px;
+	height: 30px;
+	margin-left: 4px;
+	cursor: pointer;
+}
+.login-page .re-btn a:hover{
+	cursor: pointer;
+}
+
+
+/*授权页*/
+
+.authorization-page .inner {
+	width: 500px;
+	margin: 10% auto 0 auto;
+}
+
+.authorization-page .header {
+	text-align: center;
+}
+
+.authorization-page .header img.logo {
+	max-width: 100px;
+}
+
+.authorization-page .header img.check {
+	margin-top: -3px;
+}
+
+.authorization-page .header p {
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.authorization-page .content {
+	border: 1px solid #eee;
+	margin-top: 40px;
+	overflow-y: hidden;
+}
+
+.authorization-page .content ul {
+	padding-left: 0px;
+	border-bottom: 1px solid #ddd;
+	overflow-y: hidden;
+}
+
+.authorization-page .content ul>li {
+	list-style: none;
+	padding: 20px;
+	overflow-y: hidden;
+}
+
+.authorization-page .content ul>li:last-child {
+	padding-top: 0px;
+}
+
+.authorization-page .content ul>li img {
+	max-width: 35px;
+}
+
+.authorization-page .content ul>li p {
+	margin: 0px;
+}
+
+.authorization-page .content ul>li p.lg-text {
+	color: #000;
+}
+
+.authorization-page .content .sm-text {
+	color: #888;
+	font-size: 12px;
+	margin-top: 3px;
+	padding-left: 0px;
+	border-bottom: 0px;
+}
+
+.authorization-page .content .sm-text>li {
+	padding: 0px 0px 10px 0px;
+}
+
+.authorization-page .content .hide-text {
+	display: none;
+}
+
+.authorization-page .content ul>li .arrow-down {
+	max-width: 15px;
+	vertical-align: -15px;
+}
+
+.authorization-page .content ul>li .arrow-down.active {
+	transform: rotate(180deg);
+}
+
+.authorization-page .content ul>li .arrow-down:hover {
+	cursor: pointer;
+}
+
+.authorization-page .content .blue-text {
+	color: #137FCA;
+}
+
+.authorization-page .content .btn-wrap {
+	padding: 20px 20px 10px 20px;
+}
+
+.authorization-page .content .btn-wrap .btn {
+	background-color: #137FCA;
+	border: 1px solid #137FCA;
+	height: 42px;
+}
+
+.authorization-page .content .btn-wrap p {
+	text-align: center;
+	margin-top: 15px;
+}
+
+
+/*404页,500页*/
+
+.loss-page {
+	background: url(../img/404.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.loss-page2 {
+	background: url(../img/500.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.loss-page p,
+.loss-page2 p {
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	padding-top: 33%;
+}
+
+
+/*移动端*/
+
+@media only screen and (max-width: 768px) {
+	.login-page .login-form {
+		width: 100%;
+		border: 0px;
+		box-shadow: none;
+		padding: 0px 20px 20px 20px;
+	}
+	.login-page #imgVer .inner {
+		top: 35px;
+	}
+	.authorization-page .inner {
+		width: 100%;
+	}
+	.authorization-page .content {
+		margin: 15px;
+	}
+	.loss-page p,
+	.loss-page2 p {
+		padding-top: 122%;
+		margin: 0px 25px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.login-page .login-form .form-group .vague {
+		margin-left: 10px;
+	}
+}
+
+@media only screen and (min-height: 737px) and (max-height: 823px) {
+	.loss-page p,
+	.loss-page2 p {
+		padding-top: 145%;
+	}
+}
+
+@media only screen and (max-height: 667px) {
+	.loss-page p,
+	.loss-page2 p {
+		padding-top: 120%;
+	}
+}

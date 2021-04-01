@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.github</groupId>
+		<artifactId>snail-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId>snail-demo-web</artifactId>
+	<packaging>war</packaging>
+	
+	<properties>
+		<log.extend.lib.scope>runtime</log.extend.lib.scope>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.github</groupId>
+			<artifactId>snail-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<!-- 运行时日志依赖 -->
+		<!--log4j2依赖包-->
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-api</artifactId>
+		    <scope>${log.extend.lib.scope}</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-core</artifactId>
+		    <scope>${log.extend.lib.scope}</scope>
+		</dependency>
+		<!--log4j2与slf4j的桥接依赖-->
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-slf4j-impl</artifactId>
+		    <scope>${log.extend.lib.scope}</scope>
+		</dependency>
+		<!--slf4j依赖包-->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <scope>${log.extend.lib.scope}</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<port>8080</port>
+					<contextReloadable>true</contextReloadable>
+					<backgroundProcessorDelay>2</backgroundProcessorDelay>
+					<uriEncoding>UTF-8</uriEncoding>
+					<server>tomcat7</server>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

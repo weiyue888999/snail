@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="OFF">
+
+	<Properties>
+		<!-- 日志输出格式 -->
+		<Property name="LOG_CONSOLE_LAYOUT">[Log4j2-dev][%p][%t] [%d{yyyy-MM-dd HH:mm:ss.SSS}] [%C:%M:%L] %m%n</Property>
+		<Property name="LOG_FILE_LAYOUT">[%level][%thread] [%date{yyyy-MM-dd HH:mm:ss.SSS}] [%class:%line]:%message%n</Property>
+	</Properties>
+
+	<Appenders>
+		
+		<!-- 控制台日志输出配置 -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="${LOG_CONSOLE_LAYOUT}" />
+		</Console>
+	</Appenders>
+
+	<Loggers>
+		
+		<!-- ###############同步日志配置############### -->
+		
+		
+        <!-- Spring框架日志配置 -->
+		<logger name="org.springframework" level="INFO" additivity="false">  
+            <AppenderRef ref="Console" />  
+        </logger>
+        <logger name="com.zftal.servlet.BrowserUserAgentFilter" level="TRACE" additivity="false">  
+            <AppenderRef ref="Console" />  
+        </logger>
+        <logger name="com.zftal.websocket" level="DEBUG" additivity="false">  
+            <AppenderRef ref="Console" />  
+        </logger>
+		<!-- 剩余其他的日志级别 -->
+        <Root level="DEBUG" includeLocation="true">  
+            <AppenderRef ref="Console" />  
+        </Root>
+
+	</Loggers>
+</Configuration>
