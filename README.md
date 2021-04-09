@@ -4,10 +4,10 @@
 
 下面是效果的预览图：
 
-![常规模式](https://github.com/weiyue888999/snail/raw/main/snail-doc/images/demo1.png)
+![常规模式](https://img2020.cnblogs.com/blog/1340787/202104/1340787-20210409215845722-836911914.png)
 
 
-![弹出模式](https://github.com/weiyue888999/snail/raw/main/snail-doc/images/demo2.png)
+![弹出模式](https://img2020.cnblogs.com/blog/1340787/202104/1340787-20210409215852978-1686713067.png)
 
 这个组件很可能会被爬虫高手破解，但是在用户体验方面，比传统mvc项目上的数字验证码要好很多，后续慢慢完善，争取提供更多的验证码方式，比如图片点选，旋转图片等，给Java开发人员更多的选择。
 
